@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+}
+
+img {
+    width: 200px;
+}
+
+img:hover {
+    transition: 1s;
+    transform: translateX(100px);
+    scale: 3;
+}
