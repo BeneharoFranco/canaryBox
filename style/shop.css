@@ -1,3 +1,7 @@
+body {
+    background-image: url("../assets/carton.jpg");
+}
+
 h1 {
     text-align: center;
 }
@@ -5,9 +9,19 @@ h1 {
 img {
     width: 200px;
 }
-
 img:hover {
     transition: 1s;
-    transform: translateX(100px);
-    scale: 3;
+    scale: 2;
+}
+
+ul{
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-flow: wrap;
+    align-items: baseline;
+}
+
+li{
+    padding-left: 200px;
 }
