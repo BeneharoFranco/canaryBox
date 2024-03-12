@@ -1,6 +1,6 @@
 /* Estilo para la fuente corporativa */
 
-body {
+* {
     font-family: 'Abel', sans-serif;
 }
 
@@ -21,6 +21,7 @@ header {
     justify-content: center;
     /* Ajusta el ancho del contenedor */
     width: 100%;
+    background-color: white;
         
 }
 

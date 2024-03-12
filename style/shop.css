@@ -1,4 +1,8 @@
-body {
+* {
+    font-family: 'Abel', sans-serif;
+}
+
+.container {
     background-image: url("../assets/carton.jpg");
 }
 
@@ -7,11 +11,12 @@ h1 {
 }
 
 img.fot{
-    width: 200px;
+    height: 200px;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.7));
 }
 img.fot:hover {
     transition: 1s;
-    scale: 2;
+    scale: 1.2;
 }
 
 ul.products{
