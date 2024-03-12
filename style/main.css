@@ -1,5 +1,11 @@
 /* Estilo para la fuente corporativa */
 
+body {
+        margin: 0;
+    }
+
+/* Estilo para la fuente corporativa */
+
 * {
     font-family: 'Abel', sans-serif;
 }
@@ -65,7 +71,7 @@ nav a:hover {
 
 /* Estilos para la sección "Home" */
 
-.btn-comprar, .btn-contact{
+.btn-comprar, .btn-contact {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
@@ -81,7 +87,8 @@ nav a:hover {
 }
 
 .btn-comprar:hover, .btn-contact:hover {
-    background-color: #0056b3;
+    color: #622BAF;
+    background-color: #E9CA3f;
 }
 
 .btn-comprar:focus, .btn-comprar:focus {
@@ -91,31 +98,31 @@ nav a:hover {
 
 /* Estilos para la sección "Sobre Nosotros" */
 
-.about-us {
+.about-us, .home, .contact-us {
     background-color: #f8f8f8;
     padding: 50px 0;
 }
 
-.inner-about-us {
+.inner-about-us, .inner-home, .inner-contact-us {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
 }
 
-.inner-about-us h2 {
+.inner-about-us h2, .inner-home h2, .inner-contact-us h2 {
     color: #333;
     font-size: 2rem;
     margin-bottom: 20px;
 }
 
-.inner-about-us p {
+.inner-about-us p, .inner-home p, .inner-contact-us p {
     color: #666;
     font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
-.inner-about-us img {
+.inner-about-us img, .inner-home img {
     /* Centra la imagen horizontalmente */
     text-align: center;
     /* Ajusta el ancho de la imagen al 50% del contenedor */
