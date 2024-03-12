@@ -9,6 +9,7 @@
 
 .carrito {
     width: 25%;
+    text-align: center;
 }
 
 .listado_productos {
@@ -21,7 +22,7 @@ h1 {
 }
 
 img.fot {
-    height: 200px;
+    height: 150px;
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.7));
 }
 
@@ -39,5 +40,5 @@ ul.products {
 }
 
 li.pic {
-    padding-left: 200px;
+    margin:50px 50px 50px 50px;
 }
