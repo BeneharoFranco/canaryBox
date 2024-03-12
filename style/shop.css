@@ -4,22 +4,33 @@
 
 .container {
     background-image: url("../assets/carton.jpg");
+    display: flex;
 }
+
+.carrito {
+    width: 25%;
+}
+
+.listado_productos {
+    width: 75%;
+}
+
 
 h1 {
     text-align: center;
 }
 
-img.fot{
+img.fot {
     height: 200px;
     filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.7));
 }
+
 img.fot:hover {
     transition: 1s;
     scale: 1.2;
 }
 
-ul.products{
+ul.products {
     width: 100%;
     list-style-type: none;
     display: flex;
@@ -27,6 +38,6 @@ ul.products{
     align-items: baseline;
 }
 
-li.pic{
+li.pic {
     padding-left: 200px;
 }
