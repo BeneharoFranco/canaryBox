@@ -1,0 +1,133 @@
+/* Estilo para la fuente corporativa */
+
+body {
+    font-family: 'Abel', sans-serif;
+}
+
+/* Estilos para el "menú" */
+
+header {
+    display: flex;
+    flex-direction: column;
+    /* Centra los elementos hijos horizontalmente */
+    align-items: center;
+    
+}
+
+.cb_brand {
+    /* Para aplicar correctamente justify-content */
+    display: flex;
+    /* Centra la imagen horizontalmente */
+    justify-content: center;
+    /* Ajusta el ancho del contenedor */
+    width: 100%;
+        
+}
+
+.cb_brand img {
+    /* Establece el ancho de la imagen al 50% de su contenedor */
+    width: 20%;
+    /* Mantiene la proporción de la imagen */
+    height: auto;
+}
+
+nav {
+    background-color: #E9CA3f;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /* Establece el peso de la fuente a negrita (700) */
+    font-weight: bold;
+}
+
+nav ul {
+    /* Centra el contenido horizontalmente */
+    justify-content: center;list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #622BAF;
+    padding: 10px;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* Estilos para la sección "Home" */
+
+.btn-comprar, .btn-contact{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #E9CA3f;
+    background-color: #622BAF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.btn-comprar:hover, .btn-contact:hover {
+    background-color: #0056b3;
+}
+
+.btn-comprar:focus, .btn-comprar:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, .5);
+}
+
+/* Estilos para la sección "Sobre Nosotros" */
+
+.about-us {
+    background-color: #f8f8f8;
+    padding: 50px 0;
+}
+
+.inner-about-us {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.inner-about-us h2 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.inner-about-us p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.inner-about-us img {
+    /* Centra la imagen horizontalmente */
+    text-align: center;
+    /* Ajusta el ancho de la imagen al 50% del contenedor */
+    width: 50%;
+    /* Mantiene la proporción de la imagen */
+    height: auto;
+}
+
+/* Estilos para la sección "Footer" */
+
+footer {
+    background-color: #622BAF;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}

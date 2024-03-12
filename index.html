@@ -1,13 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="src/index.js"></script>
+    <title>Canary Box - Sobre Nosotros</title>
+    <!-- Enlace al archivo CSS -->
     <link rel="stylesheet" href="style/main.css">
+    <!-- Enlace al archivo JavaScript, con defer cargamos el js después del DOM -->
+    <script defer src="src/index.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <header>
+        <a href="#" class="cb_brand">
+            <img src="assets/landscape_CanaryBox.jpg" alt="cb_brand">
+        </a>
+        
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="about/about.html">Sobre Nosotros</a></li>
+                <li><a href="contact/contact.html">Contáctanos</a></li>
+                <li><a href="shop/shop.html">Productos</a></li>
+            </ul>
+        </nav>
+    </header>
     
+    <section class="about-us">
+        <div class="inner-about-us">
+            <section id="sobre-nosotros">
+                <h2>Nuestra Misión</h2>
+                <p>Creemos que la comida es mucho más que nutrición; es cultura, es tradición y, sobre todo, es un vínculo con
+                    nuestros orígenes. Por eso, nuestra misión es compartir el calor y la singularidad de la cocina canaria con
+                    aquellos que, aunque lejos, anhelan reconectar con estas islas mágicas.</p>
+                <a href="shop/shop.html" class="btn-comprar-link">
+                    <button class="btn-comprar">Comprar</button>
+                </a>
+                <br><br>
+            </section>
+            <div id="about-us-imagen">
+                <img src="assets/home_comida.jpg" alt="Comida canaria">
+            </div>
+            <section id="ofertas">
+                <h2>¿Qué Ofrecemos?</h2>
+                <p>Desde los mojos más picantes hasta los gofios más suaves, pasando por quesos premiados y vinos con cuerpo, nuestra
+                selección está pensada para satisfacer todos los paladares. Nuestro catálogo incluye: quesos canarios, mojos y salsas, gofio, vinos y rones, dulces típicos y mucho más.</p>
+            </section>
+            <section id="como-pedir">
+                <h2>Fácil de Pedir.</h2>
+                <p>Visita tu tienda favorita y haz tu compra a distancia, nosotros nos encargamos de mandarte todo a casa.</p>
+                <a href="contact/contact.html" class="btn-contact-link">
+                    <button class="btn-contact">Contáctanos</button>
+                </a>
+            </section>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Canary Box. Todos los derechos reservados.</p>
+    </footer>
+
 </body>
 </html>
