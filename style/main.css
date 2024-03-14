@@ -98,28 +98,33 @@ nav a:hover {
 
 /* Estilos para la sección "Sobre Nosotros" */
 
-.about-us, .home, .contact-us {
+.about-us, .home, .contact-us, .shop {
     background-color: #f8f8f8;
-    padding: 50px 0;
+    padding: 0;
 }
 
-.inner-about-us, .inner-home, .inner-contact-us {
+.inner-about-us, .inner-home, .inner-contact-us, .inner-shop {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
 }
 
-.inner-about-us h2, .inner-home h2, .inner-contact-us h2 {
+.inner-carrito {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+.inner-about-us h2, .inner-home h2, .inner-contact-us h2, .inner-shop h2, .inner-carrito h2{
     color: #333;
     font-size: 2rem;
-    margin-bottom: 20px;
+    padding: 25px 0px;
+    margin: 0px;
 }
 
 .inner-about-us p, .inner-home p, .inner-contact-us p {
     color: #666;
     font-size: 1.1rem;
     line-height: 1.6;
-    margin-bottom: 20px;
 }
 
 .inner-about-us img, .inner-home img {

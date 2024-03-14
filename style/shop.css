@@ -3,11 +3,13 @@
 }
 
 .container {
-    background-image: url("../assets/carton.jpg");
+    /* background-image: url("../assets/carton.jpg"); */
     display: flex;
 }
 
 .carrito {
+    background: linear-gradient(to bottom, #622BAF, #E9CA3f);
+    color: white;
     width: 25%;
     text-align: center;
 }
@@ -16,9 +18,22 @@
     width: 75%;
 }
 
+.listado_carrito {
+    padding-bottom: 5px;
+}
+
+.pic div {
+    text-align: center;
+    /* Asegura que el texto también esté centrado */
+}
 
 h1 {
     text-align: center;
+}
+
+.mensajeCantidad {
+    color: #E9CA3f;
+    font-weight: bold;
 }
 
 img.fot {
@@ -31,14 +46,53 @@ img.fot:hover {
     scale: 1.2;
 }
 
+
 ul.products {
-    width: 100%;
-    list-style-type: none;
     display: flex;
-    flex-flow: wrap;
-    align-items: baseline;
+    flex-wrap: wrap;
+    /* Permite que los elementos se pasen a la siguiente línea si no hay espacio */
+    justify-content: space-around;
+    /* Distribuye el espacio uniformemente entre y alrededor de los elementos */
+    align-items: flex-start;
+    /* Alinea los elementos al inicio de su contenedor en el eje transversal */
+    padding: 0;
+    /* Remueve el padding por defecto del ul */
+    list-style-type: none;
+    /* Remueve los estilos de lista por defecto */
+    margin: 0 auto;
+    /* Centra el contenedor ul en su contenedor padre y remueve el margen por defecto */
+    gap: 20px;
+    /* Añade espacio entre los elementos de la lista */
+}
+
+.pic {
+    display: flex;
+    flex-direction: column;
+    /* Organiza el contenido del li en una columna */
+    align-items: center;
+    /* Centra los elementos horizontalmente en el contenedor .pic */
+    width: calc(33.333% - 20px);
+    /* Asigna un ancho a cada elemento, ajustando por el gap */
+    box-sizing: border-box;
+    /* Asegura que el padding y border estén incluidos en el ancho definido */
 }
 
 li.pic {
     margin:50px 50px 50px 50px;
+}
+
+.btn-add {
+        background-color: #E9CA3f;
+        color: #622BAF;
+        border: 0;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+
+.btn-remove {
+    background: transparent;
+    color: #E9CA3f;
+    border: 0;
+    font-weight: bold;
+    font-size: 1rem;
 }

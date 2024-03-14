@@ -1,172 +1,191 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/shop.css">
     <link rel="stylesheet" href="../style/main.css">
+    <script src="../src/index.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
-    <title>Shop</title>
+    <title>Canary Box - Shop</title>
 </head>
 
 <body>
 
-        <header>
-            <a href="../index.html" class="cb_brand">
-                <img src="../assets/landscape_CanaryBox.jpg" alt="cb_brand">
-            </a>
-        
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="#">Sobre Nosotros</a></li>
-                    <li><a href="../contact/contact.html">Contáctanos</a></li>
-                    <li><a href="../shop/shop.html">Productos</a></li>
-                </ul>
-            </nav>
-        </header>
-    <div class="container">
-        <div class="listado_productos">
-        <ul class="products">
-            <li class="pic">
-                <div>
-                    <img class="fot" src="../assets/almogrote.png"></br>
-                    <p>
-                        Almogrote
-                        <span>3.75 €</span>
-                    </p>
-                    <input id="qty" size="6" type="number" value="0">
-                    <button id="btn-add" type="button">Añadir</button>
-                </div>                
-            </li>
-            <li class="pic">
-                <div>
-                    <img class="fot" src="../assets/cafeMezcla.png"></br>
-                    <p>
-                        Café Mezcla
-                        <span>2.50 €</span>
-                    </p>
-                    <input id="qty" size="6" type="number" value="0">
-                    <button id="btn-add" type="button">Añadir</button>
-                </div>                
-            </li>
-            <li class="pic">
-                <div>
-                    <img class="fot" src="../assets/cafeNatural.png"></br>
-                    <p>
-                        Café Natural
-                        <span>2.50 €</span>
-                    </p>
-                    <input id="qty" size="6" type="number" value="0">
-                    <button id="btn-add" type="button">Añadir</button>
-                </div>                
-            </li>
-            <li class="pic">
-                <div>
-                    <img class="fot" src="../assets/chocolatinas.png"></br>
-                    <p>
-                        Chocolatinas
-                        <span>2.50 €</span>
-                    </p>
-                    <input id="qty" size="6" type="number" value="0">
-                    <button id="btn-add" type="button">Añadir</button>
+    <header>
+        <a href="../index.html" class="cb_brand">
+            <img src="../assets/landscape_CanaryBox.jpg" alt="cb_brand">
+        </a>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../about/about.html">Sobre Nosotros</a></li>
+                <li><a href="../contact/contact.html">Contáctanos</a></li>
+                <li><a href="#">Productos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="shop">
+        <div class="container">
+            <div class="listado_productos">
+                <!--
+                 <div class="inner-shop">
+                    <h2>¡Haz tu compra!</h2>
                 </div>
-            </li>
-            <li class="pic">
+                -->
+                <ul class="products">
+                    <li class="pic">
+                        <div>
+                            <img class="fot" src="../assets/almogrote.png"></br>
+                            <span class="product-wrapper">
+                                Almogrote
+                            </span>
+                            <span class="product-price">4.50€</span>
+                            <input class="quantity" size="6" type="number" value="0">
+                            <button class="btn-add" type="button">Añadir</button>
+                        </div>
+                    </li>
+                    <li class="pic">
+                        <div>
+                            <img class="fot" src="../assets/cafeMezcla.png"></br>
+                            <span class="product-wrapper">
+                                Café Mezcla
+                            </span>
+                            <span class="product-price">3.00€</span>
+                            <input class="quantity" size="6" type="number" value="0">
+                            <button class="btn-add" type="button">Añadir</button>
+                        </div>
+                    </li>
+                    <li class="pic">
+                        <div>
+                            <img class="fot" src="../assets/cafeNatural.png"></br>
+                            <span class="product-wrapper">
+                                Café Natural
+                            </span>
+                            <span class="product-price">4.00€</span>
+                            <input class="quantity" size="6" type="number" value="0">
+                            <button class="btn-add" type="button">Añadir</button>
+                        </div>
+                    </li>
+                    <li class="pic">
+                        <div>
+                            <img class="fot" src="../assets/chocolatinas.png"></br>
+                            <span class="product-wrapper">
+                                Chocolatinas
+                            </span>
+                            <span class="product-price">6.50€</span>
+                            <input class="quantity" size="6" type="number" value="0">
+                            <button class="btn-add" type="button">Añadir</button>
+                        </div>
+                    </li>
+                    <li class="pic">
+                        <div>
+                            <img class="fot" src="../assets/clipper.png"></br>
+                            <span class="product-wrapper">
+                                Clipper
+                            </span>
+                            <span class="product-price">1.20€</span>
+                            <input class="quantity" size="6" type="number" value="0">
+                            <button class="btn-add" type="button">Añadir</button>
+                        </div>
+                    </li>
+                    <li class="pic">
+                        <div>
+                            <img class="fot" src="../assets/gofio.png"></br>
+                            <span class="product-wrapper">
+                                Gofio
+                            </span>
+                            <span class="product-price">2.00€</span>
+                            <input class="quantity" size="6" type="number" value="0">
+                            <button class="btn-add" type="button">Añadir</button>
+                        </div>
+                    </li>
+                    <li class="pic">
+                        <div>
+                            <img class="fot" src="../assets/mojo.png"></br>
+                            <span class="product-wrapper">
+                                Mojo
+                            </span>
+                            <span class="product-price">3.00€</span>
+                            <input class="quantity" size="6" type="number" value="0">
+                            <button class="btn-add" type="button">Añadir</button>
+                        </div>
+                    </li>
+                    <li class="pic">
+                        <div>
+                            <img class="fot" src="../assets/munchitos.png"></br>
+                            <span class="product-wrapper">
+                                Munchitos
+                            </span>
+                            <span class="product-price">1.20€</span>
+                            <input class="quantity" size="6" type="number" value="0">
+                            <button class="btn-add" type="button">Añadir</button>
+                        </div>
+                    </li>
+                    <li class="pic">
+                        <div>
+                            <img class="fot" src="../assets/munchitosAjo.png"></br>
+                            <span class="product-wrapper">
+                                Munchitos Ajo
+                            </span>
+                            <span class="product-price">1.30€</span>
+                            <input class="quantity" size="6" type="number" value="0">
+                            <button class="btn-add" type="button">Añadir</button>
+                        </div>
+                    </li>
+                    <li class="pic">
+                        <div>
+                            <img class="fot" src="../assets/quesadilla.png"></br>
+                            <span class="product-wrapper">
+                                Quesadilla
+                            </span>
+                            <span class="product-price">2.50€</span>
+                            <input class="quantity" size="6" type="number" value="0">
+                            <button class="btn-add" type="button">Añadir</button>
+                        </div>
+                    </li>
+                    <li class="pic">
+                        <div>
+                            <img class="fot" src="../assets/quesoHerreno.png"></br>
+                            <span class="product-wrapper">
+                                Queso Ahumado
+                            </span>
+                            <span class="product-price">7.50€</span>
+                            <input class="quantity" size="6" type="number" value="0">
+                            <button class="btn-add" type="button">Añadir</button>
+                        </div>
+                    </li>
+                    <li class="pic">
+                        <div>
+                            <img class="fot" src="../assets/turron.png"></br>
+                            <span class="product-wrapper">
+                                Turrón
+                            </span>
+                            <span class="product-price">4.20€</span>
+                            <input class="quantity" size="6" type="number" value="0">
+                            <button class="btn-add" type="button">Añadir</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="carrito">
+                <h3 class="inner-carrito">Tu Canary Box</h3>
+                <div class="listadoCarrito">
+                    <!-- Los productos seleccionados aparecerán aquí -->
+                </div>
                 <div>
-                    <img class="fot" src="../assets/clipper.png"></br>
-                    <p>
-                        Clipper
-                        <span>2.50 €</span>
-                    </p>
-                    <input id="qty" size="6" type="number" value="0">
-                    <button id="btn-add" type="button">Añadir</button>
-                </div>                
-            </li>
-            <li class="pic">
-                <div>
-                    <img class="fot" src="../assets/gofio.png"></br>
-                    <p>
-                        Gofio
-                        <span>2.50 €</span>
-                    </p>
-                    <input id="qty" size="6" type="number" value="0">
-                    <button id="btn-add" type="button">Añadir</button>
-                </div>                
-            </li>
-            <li class="pic">
-                <div>
-                    <img class="fot" src="../assets/mojo.png"></br>
-                    <p>
-                        Mojo
-                        <span>2.50 €</span>
-                    </p>
-                    <input id="qty" size="6" type="number" value="0">
-                    <button id="btn-add" type="button">Añadir</button>
-                </div>                
-            </li>
-            <li class="pic">
-                <div>
-                    <img class="fot" src="../assets/munchitos.png"></br>
-                    <p>
-                        Munchitos
-                        <span>2.50 €</span>
-                    </p>
-                    <input id="qty" size="6" type="number" value="0">
-                    <button id="btn-add" type="button">Añadir</button>
-                </div>                
-            </li>
-            <li class="pic">
-                <div>
-                    <img class="fot" src="../assets/munchitosAjo.png"></br>
-                    <p>
-                        Munchitos Ajo
-                        <span>2.50 €</span>
-                    </p>
-                    <input id="qty" size="6" type="number" value="0">
-                    <button id="btn-add" type="button">Añadir</button>
-                </div>                
-            </li>
-            <li class="pic">
-                <div>
-                    <img class="fot" src="../assets/quesadilla.png"></br>
-                    <p>
-                        Quesadilla
-                        <span>2.50 €</span>
-                    </p>
-                    <input id="qty" size="6" type="number" value="0">
-                    <button id="btn-add" type="button">Añadir</button>
-                </div>                
-            </li>
-            <li class="pic">
-                <div>
-                    <img class="fot" src="../assets/quesoHerreno.png"></br>
-                    <p>
-                        Queso Ahumado
-                        <span>2.50 €</span>
-                    </p>
-                    <input id="qty" size="6" type="number" value="0">
-                    <button id="btn-add" type="button">Añadir</button>
-                </div>                
-            </li>
-            <li class="pic">
-                <div>
-                    <img class="fot" src="../assets/turron.png"></br>
-                    <p>
-                        Turrón
-                        <span>2.50 €</span>
-                    </p>
-                    <input id="qty" size="6" type="number" value="0">
-                    <button id="btn-add" type="button">Añadir</button>
-                </div>                
-            </li>
-        </ul>
-    </div>
-    <div class="carrito">
-        <h3>Carrito</h3>
-    </div>
-    </div>
+                    <br>
+                    <span>TOTAL: </span>
+                    <span class="totalCarrito">0€</span>
+                    <div class="mensajeCantidad"></div>
+
+                </div>
+            </div>
+        </div>
+    </section>
     <footer>
         <p>&copy; 2024 Canary Box. Todos los derechos reservados.</p>
     </footer>
