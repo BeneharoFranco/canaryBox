@@ -9,15 +9,11 @@ function initializeAddToCartButtons() {
 }
 
 function getProductName(productElement) {
-    // Asumiendo que '.product-wrapper' es una clase única dentro de cada elemento de producto,
-    // y que contiene el nombre del producto como su texto.
     var productNameElement = productElement.getElementsByClassName('product-wrapper')[0];
     return productNameElement.innerText.split('\n')[0];
 }
 
 function getProductPrice(productElement) {
-    // Similarmente, asumiendo que '.product-price' es único dentro de cada elemento de producto
-    // y contiene el precio del producto.
     var priceElement = productElement.getElementsByClassName('product-price')[0];
     var priceText = priceElement.innerText.replace('€', '');
     return parseFloat(priceText);
@@ -27,18 +23,22 @@ function addToCartHandler() {
     const productElement = this.parentNode;
     const productName = getProductName(productElement);
     const price = getProductPrice(productElement);
-    const quantityInput = productElement.querySelector('.quantity'); // Obtiene el elemento input directamente
-    const quantity = parseInt(quantityInput.value, 10);
+    const quantityInputs = productElement.getElementsByClassName('quantity');
+    const quantityInput = quantityInputs.length > 0 ? quantityInputs[0] : null; 
+    const quantity = quantityInput ? parseInt(quantityInput.value, 10) : 0;
 
     if (isValidQuantity(quantity)) {
         addToCart(productName, price, quantity);
         updateTotal();
-        quantityInput.value = 0;
+        if (quantityInput) quantityInput.value = 0;
     }
 }
 
+
 function getProductQuantity(productElement) {
-    return parseInt(productElement.querySelector('.quantity').value, 10);
+    const quantityInputs = productElement.getElementsByClassName('quantity');
+    const quantityInput = quantityInputs[0];
+    return parseInt(quantityInput.value, 10);
 }
 
 function isValidQuantity(quantity) {
@@ -104,26 +104,27 @@ function addRemoveButtonEventListener(productElement) {
 function updateTotal() {
     const totalElement = document.getElementsByClassName('totalCarrito')[0];
     const cartList = document.getElementsByClassName('listadoCarrito')[0];
-    const mensajeCantidadElement = document.getElementsByClassName('mensajeCantidad')[0]; // Obtiene el elemento del mensaje
+    const mensajeCantidadElement = document.getElementsByClassName('mensajeCantidad')[0];
     let total = 0;
 
-    Array.from(cartList.children).forEach(item => {
+    for (let i = 0; i < cartList.children.length; i++) {
+        const item = cartList.children[i];
         const priceElement = item.getElementsByClassName('cart-price')[0];
         if (priceElement) {
             const priceText = priceElement.innerText.replace('€', '');
             const price = parseFloat(priceText);
             total += price;
         }
-    });
+    }
 
     totalElement.innerText = `${total.toFixed(2)}€`;
 
-    // Muestra el mensaje si la cantidad total es mayor de 25
+    // Muestra el mensaje según el total calculado, envío gratuito
     if (total > 50) {
-        mensajeCantidadElement.innerText = 'ENVÍO GRATUITO'; // Actualiza el texto del mensaje
-        mensajeCantidadElement.style.display = 'block'; // Asegúrate de que el elemento sea visible
+        mensajeCantidadElement.innerText = 'ENVÍO GRATUITO';
+        mensajeCantidadElement.style.display = 'block';
     } else {
-        mensajeCantidadElement.innerText = ''; // Limpia el mensaje si el total no supera 25
-        mensajeCantidadElement.style.display = 'none'; // Opcional: Esconde el elemento
+        mensajeCantidadElement.innerText = '';
+        mensajeCantidadElement.style.display = 'none';
     }
 }
